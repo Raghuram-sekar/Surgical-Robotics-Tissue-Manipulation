@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 5
+names: ['FreshGuava', 'FreshOrange', 'RottenApple', 'RottenGuava', 'RottenOrange']
+
+roboflow:
+  workspace: robotics-3smgs
+  project: fruit-kouap-lqbfj
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/robotics-3smgs/fruit-kouap-lqbfj/dataset/1
