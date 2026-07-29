@@ -1,4 +1,4 @@
-# 🤖 Surgical Robotics: Vision-Guided Autonomous Soft-Tissue Manipulation
+# Surgical Robotics: Vision-Guided Autonomous Soft-Tissue Manipulation
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white) ![ROS2](https://img.shields.io/badge/ROS2-Humble-blue?style=for-the-badge) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
 ## 📋 Table of Contents
@@ -14,19 +14,19 @@
 
 ---
 
-## 🎯 Project Overview
+## Project Overview
 A computer vision pipeline designed for autonomous surgical tool guidance during soft-tissue manipulation. It fine-tunes a YOLOv8n object detection model on a custom dataset of 1,247 annotated images, mapping 2D bounding boxes to 3D coordinates using Intel RealSense Depth API with OpenCV on an Intel NUC i7-1260P running an Ubuntu 22.04 LTS real-time kernel.
 
 ---
 
-## 🚀 What This Project Does
+## What This Project Does
 * **The Challenge:** Surgical soft-tissue manipulation requires real-time 3D coordinate feedback with high precision, which traditional force sensors struggle to track due to sterilizability constraints and mechanical latency.
 * **Our Solution:** An autonomous vision pipeline combining deep learning detection with structured-light depth sensing, outputting coordinates to Doosan collaborative robots.
 
 ---
 
 ## 🔬 Key Innovation
-| Feature | Traditional Approach ❌ | Our Vision Solution ✅ | Benefit |
+| Feature | Traditional Approach | Our Vision Solution | Benefit |
 |---------|------------------------|------------------------|---------|
 | **Tracking** | Mechanical force sensors requiring contact | **YOLOv8 + Intel RealSense D435 depth projection** | Non-contact, high-resolution 3D coordinate tracking |
 | **Planning** | Static waypoint trajectories | **Curved-path topological planning** | Follows tissue contours dynamically |
@@ -34,10 +34,10 @@ A computer vision pipeline designed for autonomous surgical tool guidance during
 
 ---
 
-## 📊 Performance Highlights
-- ✅ **28ms YOLOv8n inference** and **5ms depth mapping** on Intel NUC.
-- ✅ **Homogeneous transformation chain** with reprojection error **< 1.0 mm**.
-- ✅ **Tested on tissue-analog fruits** spanning Young's moduli from 0.5 to 5.0 MPa.
+## Performance Highlights
+- **28ms YOLOv8n inference** and **5ms depth mapping** on Intel NUC.
+- **Homogeneous transformation chain** with reprojection error **< 1.0 mm**.
+- **Tested on tissue-analog fruits** spanning Young's moduli from 0.5 to 5.0 MPa.
 
 ---
 
@@ -70,7 +70,7 @@ Using a calibration checkerboard grid, we minimize the reprojection error to obt
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 ```
 surgical_robotics/
 ├── yolov8_training.ipynb    # YOLOv8 model training notebook
@@ -82,7 +82,7 @@ surgical_robotics/
 
 ---
 
-## 🧱 Tech Stack
+## Tech Stack
 - PyTorch & YOLOv8 computer vision models
 - Intel RealSense Depth API (D435/D455 structured-light cameras)
 - OpenCV for frame processing and pixel projection matrices
@@ -90,7 +90,7 @@ surgical_robotics/
 
 ---
 
-## 💻 Quick Start
+## Quick Start
 To configure and run the project locally, clone the repository and execute the setup instructions:
 
 ```bash
