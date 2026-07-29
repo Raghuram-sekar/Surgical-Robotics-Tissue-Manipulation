@@ -1,7 +1,7 @@
 # Surgical Robotics: Vision-Guided Autonomous Soft-Tissue Manipulation
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white) ![ROS2](https://img.shields.io/badge/ROS2-Humble-blue?style=for-the-badge) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
-## 📋 Table of Contents
+## Table of Contents
 - [Project Overview](#-project-overview)
 - [What This Project Does](#-what-this-project-does)
 - [Key Innovation](#-key-innovation)
@@ -25,7 +25,7 @@ A computer vision pipeline designed for autonomous surgical tool guidance during
 
 ---
 
-## 🔬 Key Innovation
+## Key Innovation
 | Feature | Traditional Approach | Our Vision Solution | Benefit |
 |---------|------------------------|------------------------|---------|
 | **Tracking** | Mechanical force sensors requiring contact | **YOLOv8 + Intel RealSense D435 depth projection** | Non-contact, high-resolution 3D coordinate tracking |
@@ -41,7 +41,7 @@ A computer vision pipeline designed for autonomous surgical tool guidance during
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 ```mermaid
 graph TD
     RGBD[Intel RealSense RGB-D Stream] -->|RGB Frame| YOLO[YOLOv8n Tool Detection]
@@ -53,7 +53,7 @@ graph TD
 
 ---
 
-## ⚙️ Methodology & Technical Details
+## Methodology & Technical Details
 ### Object Detection and Bounding Box Extraction
 We fine-tuned the YOLOv8n object detection network on a custom dataset of 1,247 annotated surgical tool-tip frames. The model predicts a bounding box \([u_{\min}, v_{\min}, u_{\max}, v_{\max}]\) corresponding to the tool-tip location in the 2D camera frame.
 
